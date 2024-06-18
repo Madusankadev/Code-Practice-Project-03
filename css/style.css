@@ -19,7 +19,7 @@ ul {
 :root {
     --bgNav: #F2D531;
     --bgBody: #F3DA37;
-    --textDark: #001F40;
+    --textDark: rgb(0, 31, 64);
     --textLight: #fff;
 }
 
@@ -27,6 +27,11 @@ ul {
     width: calc(100% - 2rem);
     max-width: 1000px;
     margin-inline: auto;
+}
+
+body {
+    overflow: hidden;
+    overflow-x: hidden !important;
 }
 
 .nav {
@@ -37,12 +42,14 @@ ul {
     top: 0;
     left: 0;
     right: 0;
+    box-shadow: 5px 10px 15px rgba(0, 31, 64, .05);
+    border-bottom: 1px solid rgba(0, 31, 64, .09);
 }
 
 .navBox {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;   
 }
 
 .navBox h1 {
@@ -62,13 +69,18 @@ ul {
 }
 
 .navBox ul li {
-    width: 100px;
+    width: 80px;
     /* margin-inline: 14px */
     text-align: center;
+    /* border: 1px solid red; */
 }
 
 .navBox ul li:nth-child(5) {
-    width: 150px;
+    width: 120px;
+}
+
+.navBox ul li:nth-child(4) {
+    width: 90px;
 }
 
 .navLink {
@@ -126,12 +138,95 @@ h2 {
 
 .giraffBox {
     position: absolute;
-    /* height: 700px; */
-    right: 26%;
-    bottom: -55%;
+    right: 25%;
+    top: 56%;
 }
 
-body {
-    /* overflow: hidden; */
-    background: var(--bgBody);
+@media screen and (max-width: 1000px) {
+    .giraffBox {
+        width: fit-content;
+        top: 50%;
+        left: 80%;
+         transform: translateX(-50%);
+    }
+
+    .heroSection h3 {
+        padding-top: 30%;
+    }
+
+    body {
+        overflow-y: scroll;
+        background: var(--bgBody);
+    }
+
+}
+
+.mobileMenuBtn img{
+    cursor: pointer;
+}
+
+.mobileMenuBtn {
+    display: none;
+}
+
+.closeBtn {
+    display: none;
+    position: absolute;
+    top: 6%;
+    right: 6%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .mobileChangeNav {
+        /* display: none; */
+        position: absolute;
+        background: rgba(255, 255, 255, 0.4);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 100%;
+        bottom: 0;
+
+
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+
+        transition: all ease-in-out 320ms;
+    }
+
+    .mobileChangeNav ul {
+        flex-direction: column;
+        margin-top: 10%;
+    }
+
+    .mobileChangeNav ul li {
+        margin-top: 5%;
+        width: calc(100% - 4rem) !important;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(0, 31, 64, .2);
+    }
+
+    .closeBtn {
+        display: inline;
+    }
+
+    .navLink {
+        font-size: 1rem;
+    }
+
+    .navLink:hover {
+        border: none;
+    }
+
+    .mobileMenuBtn {
+        display: inline;
+    }
+}
+
+@keyframes closeMenuAnimate {
+ 
+    100% {
+        left: 100% !important;
+    }
 }
