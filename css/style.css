@@ -224,9 +224,3 @@ h2 {
     }
 }
 
-@keyframes closeMenuAnimate {
- 
-    100% {
-        left: 100% !important;
-    }
-}
