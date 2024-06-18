@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body id="body">
     <header>
         <nav class="nav">
             <div class="container navBox">
@@ -16,7 +16,10 @@
                     <h1><span>ROOT</span>STUDIO</h1>
                 </div>
 
-                <div>
+                <div class="mobileChangeNav" id="mobileChangeNav">
+                    <div class="closeBtn" onclick="closeBtn()">
+                        <img src="./img/close.png" alt="close menu" height="32">
+                    </div>
                     <ul>
                         <li><a href="#" class="navLink">Studio</a></li>
                         <li><a href="#" class="navLink">Work</a></li>
@@ -24,6 +27,10 @@
                         <li><a href="#" class="navLink">Contact</a></li>
                         <li><a href="#" class="navLink">We're Hiring</a></li>
                     </ul>
+                </div>
+
+                <div class="mobileMenuBtn" id="mobileMenuBtn" onclick="openBtn()">
+                    <img src="./img/menu.png" alt="menu" height="32">
                 </div>
             </div>
         </nav>
@@ -40,6 +47,8 @@
             </div>
         </section>
     </header>
+
+    <script src="./main.js"></script>
 </body>
 
 </html>
