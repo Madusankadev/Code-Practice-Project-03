@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--textDark);
+}
+
+ul {
+    list-style: none;
+}
+
+:root {
+    --bgNav: #F2D531;
+    --bgBody: #F3DA37;
+    --textDark: #001F40;
+    --textLight: #fff;
+}
+
+.container {
+    width: calc(100% - 2rem);
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.nav {
+    background: var(--bgNav);
+    padding: 22px 0;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.navBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBox h1 {
+    font-weight: 300;
+    color: var(--textDark);
+    font-size: 2rem;
+    letter-spacing: 2;
+}
+
+.navBox h1 span {
+    font-weight: 900;
+}
+
+.navBox ul {
+    display: flex;
+    align-items: center;
+}
+
+.navBox ul li {
+    width: 100px;
+    /* margin-inline: 14px */
+    text-align: center;
+}
+
+.navBox ul li:nth-child(5) {
+    width: 150px;
+}
+
+.navLink {
+    cursor: pointer;
+    /* transition: border ease-in-out 300ms; */
+    border: none;
+    font-weight: 600;
+    font-size: .8rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navLink:hover {
+    padding: 8px 16px;
+    margin-inline: 0;
+    border: 2px solid var(--textLight);
+}
+
+/* heroSection */
+
+.heroSection {
+    background: var(--bgBody);
+    height: 100vh;
+}
+
+h3 {
+    text-align: center;
+    padding-top: 20%;
+    font-size: 2.6rem;
+    font-weight: 300;
+    color: var(--textDark);
+    opacity: .8;
+}
+
+h2 {
+    text-align: center;
+    font-size: 9rem;
+    color: var(--textLight);
+}
+
+.heroSection p {
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    color: var(--textDark);
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.heroSection p span {
+    font-weight: 800;
+}
+
+.giraffBox {
+    position: absolute;
+    /* height: 700px; */
+    right: 26%;
+    bottom: -55%;
+}
+
+body {
+    /* overflow: hidden; */
+    background: var(--bgBody);
+}
