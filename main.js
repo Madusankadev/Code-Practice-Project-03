@@ -1,7 +1,7 @@
 
 function closeBtn() {
             document.getElementById("mobileChangeNav").style.left = `100%`  
-            document.getElementById("body").style.overflow = "scroll"  
+             document.getElementById("body").style.overflow = "hidden"  
 }
 
 function openBtn() {
